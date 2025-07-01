@@ -1,0 +1,13 @@
+C:\Users\ziadm\Source\Repos\Task\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\ziadm\Source\Repos\Task\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\ziadm\Source\Repos\Task\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\ziadm\Source\Repos\Task\Domain\obj\Debug\net8.0\ref\Domain.dll
