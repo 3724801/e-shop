@@ -1,9 +1,9 @@
-﻿using Domain.Models.Order;
-using EShop.API.Models;
+﻿using Domain.Models;
+using Domain.Models.Orders;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace EShop.API.Data
+namespace Infrastructure.Data
 {
     public sealed class AppDbContext(DbContextOptions options) : IdentityDbContext<AppUser>(options)
     {

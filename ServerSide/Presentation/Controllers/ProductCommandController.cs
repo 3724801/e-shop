@@ -1,10 +1,10 @@
-﻿using EShop.API.Dtos;
-using EShop.API.Features.Products.Commands;
+﻿using Application.Dtos;
+using Application.Features.Products.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EShop.API.Controllers
+namespace Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -61,6 +61,5 @@ namespace EShop.API.Controllers
             }
             return NoContent();
         }
-
     }
 }

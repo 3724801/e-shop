@@ -1,12 +1,11 @@
-﻿using EShop.API.Dtos;
-using EShop.API.Features.Cart.Commands;
-using EShop.API.Features.Cart.Queries;
+﻿using Application.Dtos;
+using Application.Features.Cart.Commands;
+using Application.Features.Cart.Queries;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EShop.API.Controllers
+namespace Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

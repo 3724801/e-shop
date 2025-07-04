@@ -1,10 +1,9 @@
-﻿using Domain.Abstractions;
-using EShop.API.Dtos;
-using EShop.API.Features.Cart.Queries;
-using EShop.API.Repository.IRepository;
+﻿using Application.Dtos;
+using Application.Features.Cart.Queries;
+using Application.Interfaces;
 using MediatR;
 
-namespace EShop.API.Features.Cart.Handlers
+namespace Application.Features.Cart.Handlers
 {
     public class GetCartByIdHandler : IRequestHandler<GetCartByIdQuery, CartDto>
     {

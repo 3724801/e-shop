@@ -1,11 +1,11 @@
-﻿using Domain.Abstractions;
-using EShop.API.Dtos;
-using EShop.API.Features.Cart.Commands;
-using EShop.API.Models;
-using EShop.API.Repository.IRepository;
+﻿using Application.Dtos;
+using Application.Features.Cart.Commands;
+using Application.Interfaces;
+using Domain.Abstractions;
+using Domain.Models;
 using MediatR;
 
-namespace EShop.API.Features.Cart.Handlers
+namespace Application.Features.Cart.Handlers
 {
     public class UpdateCartHandler : IRequestHandler<UpdateCartCommand, ResultT<CartDto>>
     {
@@ -18,7 +18,7 @@ namespace EShop.API.Features.Cart.Handlers
 
         public async Task<ResultT<CartDto>> Handle(UpdateCartCommand request, CancellationToken cancellationToken)
         {
-            var cart = new Models.Cart
+            var cart = new Domain.Models.Cart
             {
                 Id = request.CartDto.Id,
                 Items = request.CartDto.Items.Select(p => new CartItem

@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "EShop.API.Controllers.CartController",
+    "ContainingType": "Presentation.Controllers.CartController",
     "Method": "UpdateCart",
     "RelativePath": "api/Cart",
     "HttpMethod": "POST",
@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "EShop.API.Dtos.CartDto",
+        "Type": "Application.Dtos.CartDto",
         "IsRequired": true
       }
     ],
@@ -31,7 +31,7 @@
     ]
   },
   {
-    "ContainingType": "EShop.API.Controllers.CartController",
+    "ContainingType": "Presentation.Controllers.CartController",
     "Method": "GetCartById",
     "RelativePath": "api/Cart/{id}",
     "HttpMethod": "GET",
@@ -46,7 +46,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EShop.API.Dtos.CartDto",
+        "Type": "Application.Dtos.CartDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "ContainingType": "EShop.API.Controllers.CartController",
+    "ContainingType": "Presentation.Controllers.CartController",
     "Method": "DeleteCart",
     "RelativePath": "api/Cart/{id}",
     "HttpMethod": "DELETE",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "ContainingType": "EShop.API.Controllers.OrderController",
+    "ContainingType": "Presentation.Controllers.OrderController",
     "Method": "AddAsync",
     "RelativePath": "api/Order",
     "HttpMethod": "POST",
@@ -112,18 +112,104 @@
         "StatusCode": 400
       },
       {
-        "Type": "Domain.Models.Order.Order",
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentation.Controllers.OrderController",
+    "Method": "GetAll",
+    "RelativePath": "api/Order",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentation.Controllers.OrderController",
+    "Method": "GetById",
+    "RelativePath": "api/Order/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
         "MediaTypes": [
           "text/plain",
           "application/json",
           "text/json"
         ],
-        "StatusCode": 201
+        "StatusCode": 404
+      }
+    ],
+    "EndpointName": "GetOrder"
+  },
+  {
+    "ContainingType": "Presentation.Controllers.OrderController",
+    "Method": "Delete",
+    "RelativePath": "api/Order/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
       }
     ]
   },
   {
-    "ContainingType": "EShop.API.Controllers.ProductCommandController",
+    "ContainingType": "Presentation.Controllers.ProductCommandController",
     "Method": "AddAsync",
     "RelativePath": "api/ProductCommand",
     "HttpMethod": "POST",
@@ -132,7 +218,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "EShop.API.Dtos.ProductCreateDto",
+        "Type": "Application.Dtos.ProductCreateDto",
         "IsRequired": true
       }
     ],
@@ -147,7 +233,7 @@
         "StatusCode": 400
       },
       {
-        "Type": "EShop.API.Dtos.ProductDto",
+        "Type": "Application.Dtos.ProductDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -158,7 +244,7 @@
     ]
   },
   {
-    "ContainingType": "EShop.API.Controllers.ProductCommandController",
+    "ContainingType": "Presentation.Controllers.ProductCommandController",
     "Method": "UpdateAsync",
     "RelativePath": "api/ProductCommand/{id}",
     "HttpMethod": "PUT",
@@ -172,7 +258,7 @@
       },
       {
         "Name": "dto",
-        "Type": "EShop.API.Dtos.ProductUpdateDto",
+        "Type": "Application.Dtos.ProductUpdateDto",
         "IsRequired": true
       }
     ],
@@ -203,7 +289,7 @@
     ]
   },
   {
-    "ContainingType": "EShop.API.Controllers.ProductCommandController",
+    "ContainingType": "Presentation.Controllers.ProductCommandController",
     "Method": "DeleteAsync",
     "RelativePath": "api/ProductCommand/{id}",
     "HttpMethod": "DELETE",
@@ -234,7 +320,7 @@
     ]
   },
   {
-    "ContainingType": "EShop.API.Controllers.ProductQueryController",
+    "ContainingType": "Presentation.Controllers.ProductQueryController",
     "Method": "GetAllProducts",
     "RelativePath": "api/ProductQuery",
     "HttpMethod": "GET",
@@ -259,7 +345,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[EShop.API.Dtos.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Application.Dtos.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -270,7 +356,7 @@
     ]
   },
   {
-    "ContainingType": "EShop.API.Controllers.ProductQueryController",
+    "ContainingType": "Presentation.Controllers.ProductQueryController",
     "Method": "GetByIdAsync",
     "RelativePath": "api/ProductQuery/{id}",
     "HttpMethod": "GET",
@@ -285,7 +371,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EShop.API.Dtos.ProductDto",
+        "Type": "Application.Dtos.ProductDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -315,7 +401,7 @@
     "EndpointName": "GetById"
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__1_3",
     "RelativePath": "confirmEmail",
     "HttpMethod": "GET",
@@ -348,7 +434,7 @@
     "EndpointName": "MapIdentityApi-/confirmEmail"
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__6",
     "RelativePath": "forgotPassword",
     "HttpMethod": "POST",
@@ -377,7 +463,7 @@
     ]
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__1_1",
     "RelativePath": "login",
     "HttpMethod": "POST",
@@ -411,7 +497,7 @@
     ]
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__1_8",
     "RelativePath": "manage/2fa",
     "HttpMethod": "POST",
@@ -447,7 +533,7 @@
     ]
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__1_9",
     "RelativePath": "manage/info",
     "HttpMethod": "GET",
@@ -477,7 +563,7 @@
     ]
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__10",
     "RelativePath": "manage/info",
     "HttpMethod": "POST",
@@ -513,7 +599,7 @@
     ]
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__2",
     "RelativePath": "refresh",
     "HttpMethod": "POST",
@@ -537,7 +623,7 @@
     ]
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__0",
     "RelativePath": "register",
     "HttpMethod": "POST",
@@ -566,7 +652,7 @@
     ]
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__DisplayClass1_0\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__5",
     "RelativePath": "resendConfirmationEmail",
     "HttpMethod": "POST",
@@ -588,7 +674,7 @@
     ]
   },
   {
-    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[EShop.API.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "ContainingType": "Microsoft.AspNetCore.Routing.IdentityApiEndpointRouteBuilderExtensions\u002B\u003C\u003Ec__1\u00601[[Domain.Models.AppUser, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "\u003CMapIdentityApi\u003Eb__1_7",
     "RelativePath": "resetPassword",
     "HttpMethod": "POST",

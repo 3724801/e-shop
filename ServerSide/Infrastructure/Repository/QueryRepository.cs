@@ -1,10 +1,10 @@
-﻿using EShop.API.Data;
-using EShop.API.Models;
-using EShop.API.Repository.IRepository;
+﻿using Application.Interfaces;
+using Domain.Models;
+using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace EShop.API.Repository
+namespace Infrastructure.Repository
 {
     public class QueryRepository<T>(AppDbContext _context) : IQueryRepository<T> where T : BaseEntity
     {

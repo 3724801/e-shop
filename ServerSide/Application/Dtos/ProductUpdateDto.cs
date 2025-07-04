@@ -1,4 +1,4 @@
-﻿namespace EShop.API.Dtos
+﻿namespace Application.Dtos
 {
     public sealed class ProductUpdateDto
     {
@@ -9,5 +9,4 @@
         public Guid CategoryId { get; set; }
         public List<ProductOptionUpdateDto> Options { get; set; } = new();
     }
-
 }

@@ -1,6 +1,4 @@
-﻿using EShop.API.Models;
-
-namespace Domain.Abstractions
+﻿namespace Domain.Abstractions
 {
     public class Errors
     {

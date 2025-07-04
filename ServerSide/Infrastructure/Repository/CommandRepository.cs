@@ -1,9 +1,9 @@
-﻿using EShop.API.Data;
-using EShop.API.Models;
-using EShop.API.Repository.IRepository;
+﻿using Application.Interfaces;
+using Domain.Models;
+using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace EShop.API.Repository
+namespace Infrastructure.Repository
 {
     public class CommandRepository<T>(AppDbContext _context) : ICommandRepository<T> where T : BaseEntity
     {

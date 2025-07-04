@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZJJBk6zZZ1k=",
+  "dgSpecHash": "Xc79EvJhTxg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ziadm\\Source\\Repos\\Task\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\ziadm\\OneDrive\\Desktop\\E-Shop\\ServerSide\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ziadm\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\ziadm\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0\\fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
